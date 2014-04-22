@@ -12,4 +12,9 @@
 *.la
 *.a
 
+# Compiled executable
 UniversalChessServer
+
+# YouCompleteMe vim addon settings
+.ycm_extra_conf.py
+.ycm_extra_conf.pyc
