@@ -1,3 +1,10 @@
+/******************************************************************************
+  Protocol.h
+  =====================
+  Original author : Julian Bironneau and Vincent Philippon
+  Original creation date : 2014-04-08
+  (See Request.h for details)
+ *****************************************************************************/
 #include "Request.h"
 #include <cstring> // memcpy
 using namespace std;

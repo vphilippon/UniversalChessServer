@@ -1,7 +1,7 @@
 /******************************************************************************
   Game.h
   =====================
-  Original author : Vincent Philippon
+  Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-03-27
 
   This class takes care of the chess game.

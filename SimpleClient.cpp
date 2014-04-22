@@ -1,3 +1,12 @@
+/******************************************************************************
+  SimpleClient.cpp
+  =====================
+  Original author : Julian Bironneau and Vincent Philippon
+  Original creation date : 2014-04-08
+
+  TODO Description
+ *****************************************************************************/
+
 #include <iostream>
 #include <string>
 #include <boost/asio.hpp>
@@ -32,100 +41,107 @@ int main()
 
   cout << "Waiting for the second player..." << endl;
 
-  Data data;
-  data = Protocol::read(socket);
-  int team = data.team;
-
-  // Am I white or black?
-  if(team > 0) // White
+  try
   {
-    cout << "You play as white." << endl;
-    
-    // White first turn
-    doMove(socket);
-  }
-  else // Black
-  {
-    cout << "You play as black." << endl;
-  }
-
-
-  bool gameOver = false;
-  while (!gameOver)
-  {
-    // Block and wait for server answer
+    Data data;
     data = Protocol::read(socket);
+    int team = data.team;
 
-    // If it's our turn to act
-    if(data.team == team)
+    // Am I white or black?
+    if(team > 0) // White
     {
-      switch (data.status)
+      cout << "You play as white." << endl;
+
+      // White first turn
+      doMove(socket);
+    }
+    else // Black
+    {
+      cout << "You play as black." << endl;
+    }
+
+
+    bool gameOver = false;
+    while (!gameOver)
+    {
+      // Block and wait for server answer
+      data = Protocol::read(socket);
+
+      // If it's our turn to act
+      if(data.team == team)
       {
-        case Data::ok:
-          showMove(data);
-          cout << "It's your turn to play." << endl;
-          doMove(socket);
-          break;
+        switch (data.status)
+        {
+          case Data::ok:
+            showMove(data);
+            cout << "It's your turn to play." << endl;
+            doMove(socket);
+            break;
 
-        case Data::rejected:
-          cout << "REJECTED : Your move was illegal. Play again." << endl;
-          doMove(socket);
-          break;
+          case Data::rejected:
+            cout << "REJECTED : Your move was illegal. Play again." << endl;
+            doMove(socket);
+            break;
 
-        case Data::promotion:
-          doPromotion(socket);
-          break;
+          case Data::promotion:
+            doPromotion(socket);
+            break;
 
-        case Data::checkOnly:
-          showMove(data);
-          cout << "ATTENTION! You are in CHECK!" << endl
-            << "It's your turn to play." << endl;
-          doMove(socket);
-          break;
+          case Data::checkOnly:
+            showMove(data);
+            cout << "ATTENTION! You are in CHECK!" << endl
+              << "It's your turn to play." << endl;
+            doMove(socket);
+            break;
 
-        case Data::checkMate:
-          showMove(data);
-          cout << "Defeat! You are CHECKMATE!" << endl;
-          gameOver = true;
-          break;
+          case Data::checkMate:
+            showMove(data);
+            cout << "Defeat! You are CHECKMATE!" << endl;
+            gameOver = true;
+            break;
 
-        case Data::draw:
-          showMove(data);
-          cout << "Draw! Your opponent move caused a STALEMATE!" << endl;
-          gameOver = true;
-          break;
+          case Data::draw:
+            showMove(data);
+            cout << "Draw! Your opponent move caused a STALEMATE!" << endl;
+            gameOver = true;
+            break;
 
-        default:
-          cout << "Oops! That wasn't expected..." << endl;
+          default:
+            cout << "Oops! That wasn't expected..." << endl;
+        }
+      }
+      else // If it's the opponent's turn to act
+      {
+        switch (data.status)
+        {
+          case Data::ok:
+            cout << "It's the opponent's turn to play." << endl;
+            break;
+
+          case Data::checkOnly:
+            cout << "The opponent is in CHECK!" << endl
+              << "It's the opponent's turn to play." << endl;
+            break;
+
+          case Data::checkMate:
+            cout << "Victory! The opponent is CHECKMATE!" << endl;
+            gameOver = true;
+            break;
+
+          case Data::draw:
+            cout << "Draw! Your move caused a STALEMATE!" << endl;
+            gameOver = true;
+            break;
+
+          default:
+            cout << "Oops! That wasn't expected..." << endl;
+        }
       }
     }
-    else // If it's the opponent's turn to act
-    {
-      switch (data.status)
-      {
-        case Data::ok:
-          cout << "It's the opponent's turn to play." << endl;
-          break;
-
-        case Data::checkOnly:
-          cout << "The opponent is in CHECK!" << endl
-            << "It's the opponent's turn to play." << endl;
-          break;
-
-        case Data::checkMate:
-          cout << "Victory! The opponent is CHECKMATE!" << endl;
-          gameOver = true;
-          break;
-
-        case Data::draw:
-          cout << "Draw! Your move caused a STALEMATE!" << endl;
-          gameOver = true;
-          break;
-
-        default:
-          cout << "Oops! That wasn't expected..." << endl;
-      }
-    }
+  }
+  catch(...)
+  {
+    cout << "The connection was closed by the server." << endl;
   }
 
   cout << "Client stopping." << endl;

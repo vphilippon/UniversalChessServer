@@ -1,3 +1,12 @@
+/******************************************************************************
+  Server.cpp
+  =====================
+  Original author : Julian Bironneau and Vincent Philippon
+  Original creation date : 2014-04-08
+
+  TODO Description
+ *****************************************************************************/
+
 #include <iostream>
 #include <string>
 #include <vector>
