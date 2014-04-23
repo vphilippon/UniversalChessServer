@@ -4,7 +4,10 @@
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
 
-  TODO Description
+  This simple client uses a console and is made for demonstration purpose.
+  It is not user-friendly and does not povide a fun experience (IMHO).
+
+  Go on and make your own client application! That's the goal of the project!
  *****************************************************************************/
 
 #include <iostream>

@@ -4,7 +4,10 @@
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
 
-  TODO Description
+  This takes care of the communication with the client and of the whole server
+  related stuff. It receives the connection, creates thread for the multiple
+  games, receive and send data to the client. It also calls the Game methods
+  to run the chess game.
  *****************************************************************************/
 
 #include <iostream>
