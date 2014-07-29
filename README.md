@@ -1,5 +1,6 @@
 UniversalChessServer
 ====================
+[![Build Status](https://travis-ci.org/vphilippon/UniversalChessServer.png?branch=master)](https://travis-ci.org/vphilippon/UniversalChessServer)
 
 A universal chess server on which both player and AI can play
 
