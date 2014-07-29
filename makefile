@@ -1,6 +1,6 @@
 # Not-My-Laziest Make file
 
-CXX=g++
+
 CXXFLAGS=-std=c++11
 SERVER_OBJECT=Server.o Protocol.o Request.o Game.o Knight.o Bishop.o Piece.o Pawn.o Queen.o King.o Rook.o
 SIMPLECLIENT_OBJECT=SimpleClient.o Protocol.o Request.o
