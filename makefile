@@ -17,3 +17,6 @@ SimpleClient: $(SIMPLECLIENT_OBJECT)
 
 clean:
 	rm -rf *.o Server SimpleClient
+
+test:
+	echo Dummy
