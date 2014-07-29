@@ -14,7 +14,7 @@ SimpleClient: $(SIMPLECLIENT_OBJECT)
 	$(CXX) -o SimpleClient $(SIMPLECLIENT_OBJECT) -lboost_system -lpthread -lboost_serialization
 
 %.o: %.cpp
-	$(CXX) -c $< -o $@ $(CXX_FLAGS)
+	$(CXX) -c $< -o $@ $(CXXFLAGS)
 
 clean:
 	rm -rf *.o Server SimpleClient
