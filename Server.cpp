@@ -16,9 +16,9 @@
 #include <boost/asio.hpp>
 #include <boost/thread.hpp>
 #include <boost/shared_ptr.hpp>
-#include "Protocol.h"
-#include "Data.h"
-#include "Game.h"
+#include "Protocol.hpp"
+#include "Data.hpp"
+#include "Game.hpp"
 
 using namespace std;
 using boost::asio::ip::tcp;

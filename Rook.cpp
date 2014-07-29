@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Rook.h for details)
+  (See Rook.hpp for details)
  *****************************************************************************/
 
-#include "Rook.h"
+#include "Rook.hpp"
 #include <cmath>
 
 using namespace std;

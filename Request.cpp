@@ -1,11 +1,11 @@
 /******************************************************************************
-  Protocol.h
+  Request.cpp
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
-  (See Request.h for details)
+  (See Request.hpp for details)
  *****************************************************************************/
-#include "Request.h"
+#include "Request.hpp"
 #include <cstring> // memcpy
 using namespace std;
 

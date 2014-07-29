@@ -3,10 +3,10 @@
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
-  (See Protocol.h for details)
+  (See Protocol.hpp for details)
  *****************************************************************************/
-#include "Protocol.h"
-#include "Request.h"
+#include "Protocol.hpp"
+#include "Request.hpp"
 #include <sstream> 
 
 using namespace std;

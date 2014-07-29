@@ -1,5 +1,5 @@
 /******************************************************************************
-  Piece.h
+  Piece.hpp
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
@@ -11,8 +11,8 @@
   Vincent Philippon, 2014-04-21 : Translate to english.
  *****************************************************************************/
 
-#ifndef PIECE_H_
-#define PIECE_H_
+#ifndef PIECE_HPP_
+#define PIECE_HPP_
 #include <assert.h>
 
 

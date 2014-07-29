@@ -13,8 +13,8 @@
 #include <iostream>
 #include <string>
 #include <boost/asio.hpp>
-#include "Protocol.h"
-#include "Data.h"
+#include "Protocol.hpp"
+#include "Data.hpp"
 
 using namespace std;
 using boost::asio::ip::tcp;

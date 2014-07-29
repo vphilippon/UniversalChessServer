@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See King.h for details)
+  (See King.hpp for details)
  *****************************************************************************/
 
-#include "King.h"
+#include "King.hpp"
 #include <cmath>
 
 using namespace std;

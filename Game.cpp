@@ -3,10 +3,10 @@
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-03-27
-  (See Game.h for details)
+  (See Game.hpp for details)
  ******************************************************************************/
 
-#include "Game.h"
+#include "Game.hpp"
 #include <cmath>
 using namespace std;
 

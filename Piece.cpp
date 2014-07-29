@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Piece.h for details)
+  (See Piece.hpp for details)
  *****************************************************************************/
 
-#include "Piece.h"
+#include "Piece.hpp"
 
 Piece::Piece(int team, bool moved)
 {

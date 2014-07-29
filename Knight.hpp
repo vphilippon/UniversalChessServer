@@ -1,29 +1,29 @@
 /******************************************************************************
-  Pawn.h
+  Knight.hpp
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
 
-  Pawn chess piece.
-  (Inherits Piece. See Piece.h for undocummented elements)
+  Knight chess piece.
+  (Inherits Piece. See Piece.hpp for undocummented elements)
 
   Modification log:
   Vincent Philippon, 2014-03-25 : Tweak for UniversalChessServer.
   Vincent Philippon, 2014-04-21 : Translate to english.
  *****************************************************************************/
 
-#ifndef PAWN_H_
-#define PAWN_H_
-#include "Piece.h"
+#ifndef KNIGHT_HPP_
+#define KNIGHT_HPP_
+#include "Piece.hpp"
 
-class Pawn :
+class Knight :
   public Piece
 {
 public:
   // Methods
-  Pawn(int team = 0, bool moved = false): Piece(team, moved) {}
-  Pawn(Piece &p): Piece(p) {}
-  ~Pawn();
+  Knight(int team = 0, bool moved = false): Piece(team, moved) {}
+  Knight(Piece &p): Piece(p) {}
+  ~Knight();
   bool destination(Piece* board[8][8], int xFrom, int yFrom, int xTo, int yTo, int turn);
   char type()const;
 };

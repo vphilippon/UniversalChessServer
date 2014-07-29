@@ -1,5 +1,5 @@
 /******************************************************************************
-  Game.h
+  Game.hpp
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-03-27
@@ -9,16 +9,16 @@
   everything goes according to the chess game rules.
  *****************************************************************************/
 
-#ifndef GAME_H_
-#define GAME_H_
-#include "Piece.h"
-#include "Rook.h"
-#include "Knight.h"
-#include "Bishop.h"
-#include "Queen.h"
-#include "King.h"
-#include "Pawn.h"
-#include "Data.h"
+#ifndef GAME_HPP_
+#define GAME_HPP_
+#include "Piece.hpp"
+#include "Rook.hpp"
+#include "Knight.hpp"
+#include "Bishop.hpp"
+#include "Queen.hpp"
+#include "King.hpp"
+#include "Pawn.hpp"
+#include "Data.hpp"
 
 
 class Game

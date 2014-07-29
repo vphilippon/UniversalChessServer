@@ -1,5 +1,5 @@
 /******************************************************************************
-  Protocol.h
+  Protocol.hpp
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
@@ -9,8 +9,8 @@
   bytes.
  *****************************************************************************/
 
-#ifndef REQUEST_H_
-#define REQUEST_H_
+#ifndef REQUEST_HPP_
+#define REQUEST_HPP_
 
 #include <cstdlib>
 

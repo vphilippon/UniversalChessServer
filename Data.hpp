@@ -1,5 +1,5 @@
 /******************************************************************************
-  Data.h
+  Data.hpp
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-01-08
@@ -9,8 +9,8 @@
   a tcp::socket.
  *****************************************************************************/
 
-#ifndef DATA_H_
-#define DATA_H_
+#ifndef DATA_HPP_
+#define DATA_HPP_
 
 #include <boost/archive/text_oarchive.hpp>
 #include <boost/archive/text_iarchive.hpp>

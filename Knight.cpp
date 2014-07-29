@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Knight.h for details)
+  (See Knight.hpp for details)
  *****************************************************************************/
 
-#include "Knight.h"
+#include "Knight.hpp"
 #include <cmath>
 
 using namespace std;

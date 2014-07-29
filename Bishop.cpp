@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Bishop.h for details)
+  (See Bishop.hpp for details)
  *****************************************************************************/
 
-#include "Bishop.h"
+#include "Bishop.hpp"
 #include <cmath>
 
 using namespace std;

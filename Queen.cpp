@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Queen.h for details)
+  (See Queen.hpp for details)
  *****************************************************************************/
 
-#include "Queen.h"
+#include "Queen.hpp"
 #include <cmath>
 
 using namespace std;

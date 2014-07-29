@@ -1,5 +1,5 @@
 /******************************************************************************
-  Protocol.h
+  Protocol.hpp
   =====================
   Original author : Julian Bironneau and Vincent Philippon
   Original creation date : 2014-04-08
@@ -10,14 +10,14 @@
   opposite process is done for the reading.
  *****************************************************************************/
 
-#ifndef PROTOCOL_H_
-#define PROTOCOL_H_
+#ifndef PROTOCOL_HPP_
+#define PROTOCOL_HPP_
 
 #include <cstdlib>
 #include <string>
 #include <boost/asio.hpp>
 #include <boost/shared_ptr.hpp>
-#include "Data.h"
+#include "Data.hpp"
 
 using namespace std;
 using boost::asio::ip::tcp;

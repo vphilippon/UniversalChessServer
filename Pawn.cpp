@@ -3,10 +3,10 @@
   =====================
   Original author : Alexandre Beaulieu and Vincent Philippon
   Original creation date : 2010-05-07
-  (See Pawn.h for details)
+  (See Pawn.hpp for details)
  *****************************************************************************/
 
-#include "Pawn.h"
+#include "Pawn.hpp"
 #include <cmath>
 
 using namespace std;
